@@ -106,7 +106,13 @@ class MyCarTile extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               // price
-              Text("\$${car.rentalPricePerDay.toStringAsFixed(2)}"),
+              Text(
+                "\$${car.rentalPricePerDay.toStringAsFixed(2)}/day",
+                style: TextStyle(
+                  color: Theme.of(context).colorScheme.inversePrimary,
+                  fontSize: 16,
+                ),
+              ),
 
               // add to fav button
               Row(
